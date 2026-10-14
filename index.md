@@ -17,6 +17,8 @@ I am **Guo Jinzheng**, a student studying data science and data visualization at
 
 The project combines Seattle's public hourly crossing counts with NOAA airport weather observations. After checking completeness and data quality, 1,087 days remain for analysis. A negative-binomial model adjusts for calendar factors and uses a moving-block bootstrap for uncertainty.
 
+**Read the result in context:** The purpose is to examine weather–crossing associations. The main finding is about 34.4% fewer expected crossings on days with at least 1 mm precipitation, after model adjustment. The key limitation is that a single-site observational comparison cannot prove causation.
+
 ![Four-panel visualization of daily bridge crossings, weather and adjusted count ratios](images/weather_crossings_dashboard.png)
 
 **Main finding:** Days with at least 1 mm precipitation have an adjusted expected-count ratio of **0.656**, relative to days below 1 mm: approximately **34.4% fewer crossings**, with a 95% block-bootstrap interval of **0.619–0.693**. The adjusted comparison of 20°C with 15°C suggests about 9.6% more crossings. These are model-dependent associations.

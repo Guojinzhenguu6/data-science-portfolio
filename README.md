@@ -20,3 +20,20 @@ This site showcases the existing Fremont Bridge preliminary analysis. Its status
 ## Review and improvement process
 
 The purpose, principal finding and limitation were reviewed with AI assistance. The review recommended placing these three points together before the first figure so a reader can identify them quickly. The website now includes a plain-language context paragraph before the visualization. This change is recorded in a descriptive commit. This review was conducted by AI, not a human classmate.
+
+### Classmate feedback: interactive visualization
+
+The student reported a classmate's suggestion to add interactive data visualization. In response, the portfolio embeds a Plotly scatter plot of daily precipitation against recorded micromobility crossings, with hover details, year selection, legend toggles, zoom/reset and image export. It uses all 1,087 usable days from the existing primary analysis. The original notebook, calculated results and static figures are preserved.
+
+Commit message: `Add interactive visualization based on classmate feedback`.
+
+## Rebuild the interactive chart
+
+Use Python 3.12 and run from this repository root:
+
+```sh
+python -m pip install -r requirements-interactive.txt
+python tools/build_interactive_chart.py
+```
+
+`data/interactive_daily.csv` contains date, precipitation, crossings and temperature midpoint copied from the [project's calculated daily data](https://github.com/Guojinzhenguu6/data-science-project/blob/main/results/analysis_daily.csv). Data sources and permissions are documented in the project README. The builder writes only `visualizations/precipitation_crossings.html`; it does not rerun the research analysis. The generated HTML bundles Plotly locally, avoiding an external script CDN. The website provides an embedded chart, a standalone chart link and a data download. The scatter plot shows unadjusted observations, not a causal effect or an adjusted model estimate.

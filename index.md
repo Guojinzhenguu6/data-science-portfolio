@@ -27,6 +27,16 @@ The project combines Seattle's public hourly crossing counts with NOAA airport w
 
 **What the second figure shows:** Residual autocorrelation remains, including about 0.326 at a one-day lag. A model can summarize an association while still leaving time patterns unexplained.
 
+### Explore daily precipitation and crossings
+
+This interactive scatter plot shows the **1,087 usable daily observations** in the original analysis. Each point represents one day: precipitation on the horizontal axis and recorded micromobility crossings on the vertical axis. Colours identify the year. Hover to see the date, precipitation, crossings and temperature midpoint; select a year or use the legend, and zoom to inspect overlapping points.
+
+<iframe src="{{ '/visualizations/precipitation_crossings.html' | relative_url }}" title="Interactive scatter plot of daily precipitation and Fremont Bridge crossings" width="100%" height="710" loading="lazy" style="border:1px solid #dce4ea;border-radius:8px;"></iframe>
+
+[Open the interactive chart in a full window]({{ '/visualizations/precipitation_crossings.html' | relative_url }}) · [Download the plotted daily data]({{ '/data/interactive_daily.csv' | relative_url }})
+
+The point cloud shows substantial variation and generally fewer high-count days at larger precipitation amounts. This is an **unadjusted** view: calendar, temperature and other factors can also influence crossings. Use the model results above for adjusted comparisons. The chart was added in response to a classmate's suggestion to include interactive data visualization.
+
 **Key limitation:** An observational study at one bridge cannot prove that weather causes changes in travel. Airport weather may differ from bridge conditions, counts include repeat crossings, and unmeasured events may influence results. These estimates are not a forecast for other locations.
 
 [Explore the project, source permissions and reproduction instructions →](https://github.com/Guojinzhenguu6/data-science-project)
